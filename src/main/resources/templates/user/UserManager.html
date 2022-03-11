@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>개인정보관리</title>
+</head>
+<body>
+ <!-- user_info - model로 부터 받아온 user 객체 -->
+
+<h1>개인정보관리</h1>
+<form action="/user-modify" method="post" >
+
+<p th:text="${user_info.user_name}">이름</p>
+<input name="user_name" type ="text">
+
+<p th:text = "${user_info.user_age}">나이</p>
+<input name="user_age" type ="number">
+<button type="submit">수정</button>
+</form>
+
+</body>
+</html>
